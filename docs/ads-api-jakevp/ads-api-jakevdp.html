@@ -1,0 +1,52 @@
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ads</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+
+<span class="k">def</span> <span class="nf">query_counts</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">acknowledgements</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">acknowledgements</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;ack:&#39;</span> <span class="o">+</span> <span class="n">query</span>
+    <span class="n">modifiers</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;year:</span><span class="si">%i</span><span class="s1">&#39;</span><span class="p">])</span>
+    <span class="n">full_query</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">query</span><span class="p">,</span> <span class="n">modifiers</span><span class="p">])</span>
+    <span class="n">filter_query</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;database:astronomy&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;property:refereed&#39;</span><span class="p">]</span>
+    <span class="n">papers</span> <span class="o">=</span> <span class="n">ads</span><span class="o">.</span><span class="n">SearchQuery</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">full_query</span> <span class="o">%</span> <span class="n">year</span><span class="p">,</span>
+                             <span class="n">fq</span><span class="o">=</span><span class="n">filter_query</span><span class="p">)</span>
+    <span class="n">papers</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">papers</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">numFound</span><span class="p">)</span>
+    <span class="n">total_papers</span> <span class="o">=</span> <span class="n">ads</span><span class="o">.</span><span class="n">SearchQuery</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">modifiers</span> <span class="o">%</span> <span class="n">year</span><span class="p">)</span>
+    <span class="n">total_papers</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="n">total_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">total_papers</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">numFound</span><span class="p">)</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">==</span> <span class="n">now</span><span class="o">.</span><span class="n">tm_year</span><span class="p">:</span>
+        <span class="n">days_in_year</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()</span><span class="o">.</span><span class="n">tm_yday</span>
+        <span class="n">count</span> <span class="o">*=</span> <span class="n">days_in_year</span> <span class="o">/</span> <span class="n">now</span><span class="o">.</span><span class="n">tm_yday</span>
+        <span class="n">total_count</span> <span class="o">*=</span> <span class="n">days_in_year</span> <span class="o">/</span> <span class="n">now</span><span class="o">.</span><span class="n">tm_yday</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+                <span class="n">total_count</span><span class="o">=</span><span class="n">total_count</span><span class="p">)</span>
+
+
+<span class="n">languages</span> <span class="o">=</span> <span class="p">{</span>
+             <span class="s1">&#39;IDL&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;IDL&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;Python&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;Matlab&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;MATLAB&#39;</span><span class="p">,</span> <span class="s1">&#39;Matlab&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;Fortran&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fortran&#39;</span><span class="p">,</span> <span class="s1">&#39;FORTRAN&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;Java&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C programming language&#39;</span><span class="p">,</span> <span class="s1">&#39;C language&#39;</span><span class="p">,</span> <span class="s1">&#39;C code&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;C library&#39;</span><span class="p">,</span> <span class="s1">&#39;C module&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;R programming language&#39;</span><span class="p">,</span> <span class="s1">&#39;R language&#39;</span><span class="p">,</span> <span class="s1">&#39;R code&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;R library&#39;</span><span class="p">,</span> <span class="s1">&#39;R module&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;Mathematica&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Mathematica&#39;</span><span class="p">],</span>
+             <span class="s1">&#39;Julia&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Julia&#39;</span><span class="p">],</span>
+            <span class="p">}</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;ADS_results.csv&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">query_counts</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">queries</span> <span class="ow">in</span> <span class="n">languages</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                            <span class="k">for</span> <span class="n">query</span> <span class="ow">in</span> <span class="n">queries</span>
+                            <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1995</span><span class="p">,</span> <span class="mi">2018</span><span class="p">)])</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>

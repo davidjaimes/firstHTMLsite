@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | Blog</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader"></div>
+        <div class="banner" id="mission-beach">
+            <div class="transbox">
+                <h1>Blog</h1>
+                <br>
+                <hr>
+                <br>
+                <p>Email: <a href="mailto:david@djaimes.com">david@djaimes.com</a></p>
+            </div>
+        </div>
+        <div class="homesec">
+            <table class="tile">
+                <tr>
+                    <td style="width: 25%"><a href="http://thedailyaztec.com/80029/artsandlifestyle/graduate-student-shoots-for-the-stars/"><img src="https://djaimes.com/images/eric-mclaughlin.png" width="100%"></a></td>
+                    <td><a href="http://thedailyaztec.com/80029/artsandlifestyle/graduate-student-shoots-for-the-stars/">Daily Aztec</a><br><span style="font-size: 10pt">An interview a former student did on me for the daily newspaper at SDSU.</span></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/custom-domain"><img src="https://djaimes.com/images/djaimes.com.png" width="100%"></a></td>
+                    <td><a href="https://djaimes.com/custom-domain">Google Domains</a><br><span style="font-size: 10pt">Setting up a custom domain wegpage with Google and Github.</span></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/san-diego-marathon"><img src="https://djaimes.com/images/finishers-by-year.png" width="100%"></a></td>
+                    <td><a href="https://djaimes.com/san-diego-marathon">San Diego Marathon</a><br><span style="font-size: 10pt">Data analysis for the San Diego Rock N Roll Marathon.</td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/ugrad"><img src="https://djaimes.com/images/kepler-5023948-lc.png" width="100%"></a></td>
+                    <td><a href="https://djaimes.com/ugrad">Undergraduate Research</a><br><span style="font-size: 10pt">Finding eclipsing binary stars in old, open cluster NGC 6819.</td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/nasa-ads-api"><img src="https://djaimes.com/images/ads-languages.png" width="100%"></a></td>
+                    <td><a href="https://djaimes.com/nasa-ads-api">NASA ADS API</a><br><span style="font-size: 10pt">Data mining with NASA's Astrophysics Data System (ADS) API.</span></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/jskycalc"><img src="https://djaimes.com/images/jskycalc.png" width="100%"></a></td>
+                    <td><a href="https://djaimes.com/jskycalc">JSkyCalc</a><br><span style="font-size: 10pt">Install and setup JSkyCalc on macOS High Sierra.</span></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/graph-paper"><img src="https://djaimes.com/images/graph-paper.png" width="100%"></a></td>
+                    <td><a href="https://djaimes.com/graph-paper">Graph Paper</a><br><span style="font-size: 10pt">Need graph paper? Use this Python code print out your own.</span></td>
+                </tr>
+                <tr>
+                    <td style="width: 25%"><a href="https://djaimes.com/terminal"><img src="https://djaimes.com/images/terminal.png"  width="100%"></a></td>
+                    <td><a href="https://djaimes.com/terminal">macOS Terminal</a><br><span style="font-size: 10pt">Setup color scheme on Terminal app on macOS High Sierra.</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body> 
+</html>

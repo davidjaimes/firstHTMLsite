@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | NASA ADS</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader" ></div>
+        <div class="homesec">
+            <br><br><br><br>
+            <h1>Data mining with NASA's ADS API</h1>
+            <br><br><br>
+            <p>
+                <b>Step 1</b>: Generate ADS API Token key. Go to <a href="https://ui.adsabs.harvard.edu">NASA ADS</a> website and create an account login. Login with new account and go to <code>Account > Customize Settings > API Token</code>, then click the Generate a new key button.
+                <br /><br /><br>
+                <b>Step 2</b>: Save your ADS API Token key as an environment variable in your <code>.bash_profile</code> file like the following:
+            </p>
+            <br><br><br>
+                <div class="highlight"><pre><span></span><span class="c1"># ADS API Token Key YYYYMMMDD from https://ui.adsabs.harvard.edu/</span>
+<span class="nb">export</span> <span class="nv">ADS_API_KEY</span><span class="o">=</span><span class="s2">&quot;Insert_ADS_API_Token_key_here&quot;</span>
+</pre></div>
+            <br><br><br>
+            <p>
+                <b>Step 3</b>: I grabbed the following Python code in this <a href="https://gist.github.com/jakevdp/f75c09e43320290ffbedbca43f9fd917">Jake Vanderplas' Jupyter Notebook</a> to save the search results in a file named <code>ADS_results.csv</code>:
+            </p>
+            <br><br><br>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ads</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+
+<span class="k">def</span> <span class="nf">query_counts</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">acknowledgements</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">acknowledgements</span><span class="p">:</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="s1">&#39;ack:&#39;</span> <span class="o">+</span> <span class="n">query</span>
+    <span class="n">modifiers</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;year:</span><span class="si">%i</span><span class="s1">&#39;</span><span class="p">])</span>
+    <span class="n">full_query</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">query</span><span class="p">,</span> <span class="n">modifiers</span><span class="p">])</span>
+    <span class="n">filter_query</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;database:astronomy&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;property:refereed&#39;</span><span class="p">]</span>
+    <span class="n">papers</span> <span class="o">=</span> <span class="n">ads</span><span class="o">.</span><span class="n">SearchQuery</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">full_query</span> <span class="o">%</span> <span class="n">year</span><span class="p">,</span>
+                                <span class="n">fq</span><span class="o">=</span><span class="n">filter_query</span><span class="p">)</span>
+    <span class="n">papers</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">papers</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">numFound</span><span class="p">)</span>
+    <span class="n">total_papers</span> <span class="o">=</span> <span class="n">ads</span><span class="o">.</span><span class="n">SearchQuery</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="n">modifiers</span> <span class="o">%</span> <span class="n">year</span><span class="p">)</span>
+    <span class="n">total_papers</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    <span class="n">total_count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">total_papers</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">numFound</span><span class="p">)</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">==</span> <span class="n">now</span><span class="o">.</span><span class="n">tm_year</span><span class="p">:</span>
+        <span class="n">days_in_year</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span><span class="o">.</span><span class="n">timetuple</span><span class="p">()</span><span class="o">.</span><span class="n">tm_yday</span>
+        <span class="n">count</span> <span class="o">*=</span> <span class="n">days_in_year</span> <span class="o">/</span> <span class="n">now</span><span class="o">.</span><span class="n">tm_yday</span>
+        <span class="n">total_count</span> <span class="o">*=</span> <span class="n">days_in_year</span> <span class="o">/</span> <span class="n">now</span><span class="o">.</span><span class="n">tm_yday</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+                <span class="n">total_count</span><span class="o">=</span><span class="n">total_count</span><span class="p">)</span>
+
+
+<span class="n">languages</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;IDL&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;IDL&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Python&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Matlab&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;MATLAB&#39;</span><span class="p">,</span> <span class="s1">&#39;Matlab&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Fortran&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fortran&#39;</span><span class="p">,</span> <span class="s1">&#39;FORTRAN&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Java&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Java&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C programming language&#39;</span><span class="p">,</span> <span class="s1">&#39;C language&#39;</span><span class="p">,</span> <span class="s1">&#39;C code&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;C library&#39;</span><span class="p">,</span> <span class="s1">&#39;C module&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;R programming language&#39;</span><span class="p">,</span> <span class="s1">&#39;R language&#39;</span><span class="p">,</span> <span class="s1">&#39;R code&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;R library&#39;</span><span class="p">,</span> <span class="s1">&#39;R module&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Mathematica&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Mathematica&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;Julia&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Julia&#39;</span><span class="p">],</span>
+            <span class="p">}</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;ADS_results.csv&#39;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">query_counts</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">queries</span> <span class="ow">in</span> <span class="n">languages</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                            <span class="k">for</span> <span class="n">query</span> <span class="ow">in</span> <span class="n">queries</span>
+                            <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1995</span><span class="p">,</span> <span class="mi">2018</span><span class="p">)])</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>                        
+            <br><br><br>
+            <p>
+                <b>Step 4</b>: My own script to plot the results in <code>ADS_results.csv</code> file:
+            </p>
+            <br><br><br>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;ADS_results.csv&quot;</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;year&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">results</span><span class="p">[</span><span class="s1">&#39;pct&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;total_count&#39;</span><span class="p">]</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;C7&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">results</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;Julia&#39;</span><span class="p">]:</span>
+        <span class="k">continue</span>
+    <span class="n">group</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;pct&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Year of Publication&#39;</span><span class="p">,</span>
+        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Percent of Publications&#39;</span><span class="p">)</span>
+
+<span class="c1"># text annotations</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">leg</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">text</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">leg</span><span class="o">.</span><span class="n">get_texts</span><span class="p">()):</span>
+    <span class="n">text</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s2">&quot;C&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Year of publication&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C7&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Percent of publications&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C7&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># final layout options</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1995</span><span class="p">,</span> <span class="mi">2019</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C7&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C7&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1995</span><span class="p">,</span> <span class="mi">2018</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">minor</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">),</span> <span class="n">minor</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C7&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C7&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s2">&quot;both&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s2">&quot;both&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.00</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ads-languages.png&#39;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>                        
+            <br><br><br>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/ads-languages.png"><img src="https://djaimes.com/images/ads-languages.png" style="width: 100%;" /></a>
+            </p>
+        </div>
+        <br><br>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>

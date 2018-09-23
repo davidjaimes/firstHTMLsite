@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | Photos</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader" ></div>
+        <div class="banner" id="mission-beach">
+            <div class="transbox">
+                <h1>Photos</h1>
+                <br>
+                <hr>
+                <br>
+                <p>Email: <a href="mailto:david@djaimes.com">david@djaimes.com</a></p>
+            </div>
+        </div>
+        <br><br>
+        <div class="homesec">
+            <br><br>
+            <h1>Undergraduate</h1>
+            <h4>40-inch telescope at Mount Laguna Observatory</h4>
+            <br>
+            <p>
+                I did my undergraduate work at San Diego State Univeristy. I went several times up to Mount Laguna Observatory with different graduate students as a secondary observer. In the picture I am refilling the CCD camera with liquid nitrogen because it has to be cooled to a temperature of -125 degrees celsius. In case your wondering, I've grown my hair many times in the past. The last time I cut it was the first time I donated my hair to Locks of Love.
+                <br><br>
+                Visit <a href="http://www.locksoflove.org">Locks of Love</a> to donate.
+                <br><br>
+            </p>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/me-40in.jpg"><img src="https://djaimes.com/images/me-40in.jpg" style="width: 80%;"></a>
+            </p>
+            <p style="text-align: center; font-size: 8pt; font-style: italic">
+                Figure 1: 40-inch telescope at Mount Laguna Observatory. <br>Image Credit: Ernest Bavarsad, 2011.
+            </p>
+            <br>
+            <br>
+            <h1>Post-Bachelor</h1>
+            <h4>Meeting Neil Degrasse Tyson in his office.</h4>
+            <br>
+            <p>
+                I lived in New York City for 2 years and had a full-time job as a research assistant at Columbia University. As a researcher I often collaborate with othe people on projects and that meant I could visit the American Museum of Natural History (AMNH) and New York Universiy (NYU). I met Neil DeGrasse Tyson a few times when I visited the Department of Astrohysics in the Rose Center of Earth and Space (AMNH). He said it himself, "I am bad at taking selfies". Here is proof--he took the selfie. My graphic desgin friend photoshopped the space background over Neil's office.
+                <br><br>
+                Visit <a href="http://www.amnh.org/our-research/physical-sciences/astrophysics">AMNH</a> website to learn more.
+                <br><br>
+            </p>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/me-NDT.jpg"><img src="https://djaimes.com/images/me-NDT.jpg" style="width: 80%;"></a>
+            </p>
+            <p style="text-align: center; font-size: 8pt; font-style: italic">
+                Figure 2: American Museum of Natural History, NYC. <br>Image Credit: Neil DeGrasse Tyson, 2014.
+            </p>
+            <br>
+            <br>
+            <h1>Post-Bachelor</h1>
+            <h4>Observing at MDM Observatory in Kitt Peak, AZ.</h4>
+            <br>
+            <p>
+                Being an observational astronomer quite often means you will have to write scientific proposals for telescope time to various observatories. My first proposal to get accepted as principal investigator, and it's commonly competitive, awarded me with 7 nights at the 2.4-meter Hiltner Telescope at MDM Observatory in Kitt Peak National Observatory. My daily routine there began at sunset (5:30 PM), observe until sunrise (6:00 AM), then sleep until 3:00 PM. Then, repeat. In general, it is physically and mentally draining to observe at telescopes!                
+                <br><br>
+                Visit <a href="http://mdm.kpno.noao.edu/index/MDM_Observatory.html">MDM Observatory</a> website to learn more.
+                <br><br>
+            </p>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/me-hiltner.jpg"><img src="https://djaimes.com/images/me-hiltner.jpg" style="width: 80%;" /></a>
+            </p>
+            <p style="text-align: center; font-size: 8pt; font-style: italic">
+                Figure 3: 2.4-meter telescope at MDM Observatory, Kitt Peak, AZ. <br>Image Credit: Stephanie Douglas, 2014.
+            </p>
+        </div>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>

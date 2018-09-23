@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | San Diego Marathon</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader" ></div>
+        <div class="homesec">
+            <br><br><br><br>
+            <h2>San Diego Marathon</h2>
+            <h4>Analysis of the full and half Rock N Roll marathon race.</h4>
+            <br>
+            <p>
+                I downloaded the running data from the <a href="http://www.runrocknroll.com/san-diego/the-races/results/">Rock N Roll Marathon</a> website. The file, <code>SD-RNR.parquet</code> (504 KB), contains all available data from years 2016 to 2018. Download the file here: <a href="http://djaimes.com/san-diego-marathon/SD-RNR.parquet">SD-RNR.parquet</a>
+            </p>
+            <br><br>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/finishers-by-year.png">
+                    <img src="https://djaimes.com/images/finishers-by-year.png" style="width: 100%;" />
+                </a>
+            </p>
+        </div>
+        <br><br>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>

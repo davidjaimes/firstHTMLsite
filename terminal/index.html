@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | Terminal</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader" ></div>
+        <div class="homesec">
+            <br><br><br><br>
+            <h1>Terminal app on macOS Sierra</h1>
+            <br><br>
+            <h3>Part 1: Adding color to your Terminal</h3>
+            <br>
+            <p>Add following lines to <code>.bash_profile</code> file.</p>
+            <br><br>
+<div class="highlight"><pre><span></span><span class="c1"># Custom colors for bash Terminal in macOS Sierra (Unix)</span>
+<span class="c1"># Default is:  “exfxcxdxbxegedabagacad”</span>
+<span class="nb">export</span> <span class="nv">LSCOLORS</span><span class="o">=</span>bxgxcxdxbxegedabagacad
+<span class="nb">export</span> <span class="nv">CLICOLOR</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+            <br><br>
+            <p>
+                For more information on letter meaning check out the <a href="http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/">OSX Daily</a> website. You can also look through this site for more explanations go to the <a href="http://www.norbauer.com/rails-consulting/notes/ls-colors-and-terminal-app.html">Norbauer</a> website.
+            </p>
+            <br><br>
+            <h3>Part 2: Adding color to bash prompt</h3>
+            <br><br>
+            <p>Add following lines to <code>.bash_profile</code> file.</p>
+            <br><br>
+<div class="highlight"><pre><span></span><span class="c1"># Custom bash prompt via kirsle.net/wizards/ps1.html</span>
+<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[</span><span class="k">$(</span>tput setaf <span class="m">6</span><span class="k">)</span><span class="s2">\]david jaimes bash shell \[</span><span class="k">$(</span>tput setaf <span class="m">1</span><span class="k">)</span><span class="s2">\][\W] \[</span><span class="k">$(</span>tput setaf <span class="m">6</span><span class="k">)</span><span class="s2">\]</span>$<span class="s2"> \[</span><span class="k">$(</span>tput sgr0<span class="k">)</span><span class="s2">\]&quot;</span>
+</pre></div>
+            <br><br>
+            <p>
+                For more information on custom prompt generators go to <a href="https://www.kirsle.net/wizards/ps1.html">Noah Petherbridge's</a> website titled Kirsle.
+            </p>
+            <br><br>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/terminal.png"><img src="https://djaimes.com/images/terminal.png"  style="width: 100%;"/></a>
+			</p>
+        </div>
+        <br><br>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | Custom Domain</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader" ></div>
+        <div class="homesec">
+            <br><br><br><br>
+            <h1>Custom domain name with Google Domains, Github, and Cloudflare</h1>
+            <br><br><br>
+            <p>
+                I already had a personal webpage from Github Pages but I wanted to move away from the default <code>username.github.io</code> convention and register my own custom domain. I found you can purchase a custom domain name from Google if you already have a Gmail account. Just go to <a href="https://domains.google/#/">Google Domains</a>, search for a name you like and purchase it. It is that easy! <br><br> To setup my custom domain name from GitHub, I went to the "Settings" tab in my <code>username.github.io</code> repository and added it. After a few failed attempts to get the page up and running, I discovered from the help pages I needed to add either an <code>ALIAS</code> or <code>ANAME</code> record. However, since Domains does not support either <code>ALIAS</code> or <code>ANAME</code> records, I followed the directions (<a href="https://help.github.com/articles/setting-up-an-apex-domain/#configuring-a-records-with-your-dns-provider">Github A record settings</a>) to setup an "A" record instead. Put both IPv4 addresses at the same time by using the plus sign. Change from <code>davidjaimes.github.io</code> to <code>davidjaimes.run</code>. <br><br> Another nice feature from Google Domains is the ability to add up to 100 email aliases. Instead of giving out a Gmail address--a little unprofessional in my case--I added a few email aliases. Now I can give out <code>astro@davidjaimes.run</code> instead of <code>username@gmail.com</code>. Pretty cool! <br><br> So, there you have it. If you're like me and already have a GitHub webpage you'd like to switch to a personal custom domain, follow these easy steps to get your site up and running. Send me an email and let me know if you have any questions or suggestions. Thank you!</p>
+            </div>
+        <br><br>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>

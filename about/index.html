@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | About</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader"></div>
+        <div class="banner" id="no-image-on-banner">
+            <div class="transbox">
+                <h1>About Me</h1>
+                <br>
+                <hr>
+                <br>
+                <p>Email: <a href="mailto:david@djaimes.com">david@djaimes.com</a></p>
+            </div>
+        </div>
+        <br><br>
+        <div class="homesec">
+            <h1>Biography</h1>
+            <h4>Important highlights on my professional development.</h4>
+            <br><br>
+            <p>
+                I, David Jaimes, a native San Diegan from California, received my B.S. in astronomy from San Diego State University (SDSU)
+                in 2013. At SDSU, my research with Eric L. Sandquist focused on investigating the age of the old open cluster, NGC 6819.
+                <br>
+                <br> I also worked for Astronomical Research Cameras, assembling controllers and multiplexors for the Visible Integral
+                Field Replicable Unit Spectrographs used by the Hobby-Eberly Telescope Dark Energy Experiment project at the University
+                of Texas, Austin.
+                <br>
+                <br> During the Bridge to the Ph.D. Program, I worked with Marcel A. Agüeros on the young open cluster, Alpha Persei.
+                The new rotation periods that I measured for stars in this cluster would be used to calibrate and anchor the relationship
+                between stellar age and rotation.
+                <br>
+                <br> Thanks to the efforts of the Bridge to the Ph.D. Program, I moved to California and was pursuing an M.S.
+                in astronomy at SDSU. I was working with Robert W. Quimby, Director of the Mount Laguna Observatory, to classify
+                spectra (usually supernovae) taken with the 60-inch telescope at Palomar Mountain.
+                <br>
+                <br> In 2017, I took a leave of absence from SDSU and put my thesis project on hold to help my wife immigrate to the United States. I plan to finish my graduate studies at some point in the future when the opportunity arises. For now, I am pursuing a career as data scientist, data enigineer, data analyst, or software enigineer.
+            </p>
+            <br><br>
+            <h1>Literature</h1>
+            <h4>Books currently reading.</h4>
+            <br><br>
+            <table style="border-collapse: collapse" class="line">
+                <caption>Table 1: Currently reading book list by title and author(s). Last Updated: August 2018.</caption>
+                <tr>
+                    <td>Hyperion</td>
+                    <td>Dan Simmons</td>
+                </tr>
+                <tr>
+                    <td>Dark Matter and the Dinosaurs</td>
+                    <td>Lisa Randall</td>
+                </tr>
+                <tr>
+                    <td>Cthulhu Mythos Tales</td>
+                    <td>H.P. Lovecraft</td>
+                </tr>
+                <tr>
+                    <td>Heart of Darkness</td>
+                    <td>Jeremiah P. Ostriker, Simon Mitton</td>
+                </tr>
+                <tr>
+                    <td>Build Your Running Body</td>
+                    <td>Pete Magill, Thomas Schwartz, Melissa Breyer</td>
+                </tr>
+                <tr>
+                    <td>Legado Astronomico</td>
+                    <td>J. Daniel Flores Guitierrez, Margarita Rosado Solis, Jose Franco Lopez</td>
+                </tr>
+                <tr>
+                    <td>Python for Data Analysis: 2nd Edition</td>
+                    <td>Wes McKinney</td>
+                </tr>
+                <tr>
+                    <td>Python Data Science Handbook</td>
+                    <td>Jake VanderPlas</td>
+                </tr>
+            </table>
+            <br><br>
+            <h1>Location</h1>
+            <h4>Approximate current position.</h4>
+            <br><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13426.298158110982!2d-117.14412259999999!3d32.723931549999996!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1527215210860"
+                width=100% height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p style="text-align: center; font-size: 8pt; font-style: italic">
+                Figure 2: Google Map where my wife, Naxiely, and I live. Image Credit: Google, 2018.
+            </p>
+        </div>
+        <br><br>
+        <div id="loadfooter"></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>

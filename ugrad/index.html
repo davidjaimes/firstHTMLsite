@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="David Jaimes' Website">
+        <meta name="keywords" content="David, Jaimes, Astronomy, Python, Astropy, Data, Science">
+        <meta name="author" content="David Jaimes">
+        <link rel="stylesheet" href="https://djaimes.com/css/main.css">
+        <link rel="stylesheet" href="https://djaimes.com/css/paraiso-dark.css">
+        <title>David Jaimes | Undergraduate</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+            $(function () {
+                $("#loadheader").load("https://djaimes.com/header.html");
+                $("#loadfooter").load("https://djaimes.com/footer.html");
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loadheader" ></div>
+        <div class="homesec">
+            <br><br><br><br>
+            <h1>Undergraduate Work</h1>
+            <br><br>
+            <p>
+                Time series analysis in search for eclipsing binary stars can be daunting. Sometimes, it takes hours--even days or months--to find a single eclipsing binary in a dataset. However, when you find one, it is exciting. The following is an example light curve for target Kepler 5023948. If you know how to read FITS files, then download the data here: <a href="https://djaimes.com/ugrad/kplr005023948-2012060035710_slc.fits">kepler-5023948.fits</a>
+            </p>
+            <br><br>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/kepler-5023948-lc.png"><img src="https://djaimes.com/images/kepler-5023948-lc.png" style="width: 100%;" /></a>
+            </p>
+            <br><br>
+            <p>
+                Arguably, one of the most important parameters to find for an eclipsing binary star system is the orbital period. There are many ways to find the period around the center of mass and the method I like to use is a multi-term Lomb-Scargle approach. For this system, I used the period published in <a href="https://djaimes.com/ugrad/Brewer_2016_AJ_151_66.pdf">Brewer et al. 2016</a>. They found an orbital period of 3.649301 days. Phase folding the light curve with this orbital period yields the following plot. The secondary and primary eclipses are at about phase equal to 0.2 and 0.7, respectively.
+            </p>
+            <br><br>
+            <p style="text-align: center;">
+                <a href="https://djaimes.com/images/kepler-5023948-pf.png"><img src="https://djaimes.com/images/kepler-5023948-pf.png" style="width: 100%;" /></a>
+            </p>
+        </div>
+        <br><br>
+        <div id="loadfooter" ></div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "header") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "header";
+                }
+                var y = document.getElementById("ptext");
+                if (y.innerHTML === 'Menu <i class="fas fa-ellipsis-v"></i>') {
+                    y.innerHTML = 'Close <i class="fas fa-times"></i>'
+                } else {
+                    y.innerHTML = 'Menu <i class="fas fa-ellipsis-v"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>
