@@ -8,6 +8,7 @@ Comments: Questions about the code? Feel free to contact me via email.
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300');
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Raleway")
 * {
     margin: 0px;
     padding: 0px;
@@ -106,8 +107,8 @@ nav {
 }
 .homepic p {
     color: #b3b3b3;
-    font-family: 'Oxygen', sans-serif;
-    letter-spacing: 1.5pt;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0pt;
     font-size: 12pt;
 }
 .homesec {
