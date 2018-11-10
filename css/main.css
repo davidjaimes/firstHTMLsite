@@ -119,7 +119,7 @@ nav {
 .homesec p {
     color: #b3b3b3;
     font-family: 'Oxygen', sans-serif;
-    letter-spacing: 0.5pt;
+    letter-spacing: 1.0pt;
     line-height: 1.5;
     font-size: 12pt;
 }
@@ -133,11 +133,14 @@ nav {
     font-family: 'Arial', sans-serif;
     letter-spacing: 1pt;
 }
+<<<<<<< HEAD
 .homesec code {
     color: #fec418;
     background: rgba(26, 26, 26, 0.98);
     padding: 4px;
 }
+=======
+>>>>>>> parent of a4a0761... add color to code tag
 .homesec pre {
     overflow-x: scroll;
     background: rgba(26, 26, 26, 0.98);
