@@ -65,7 +65,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 248px;
+    max-height: 248px;
 }
 #no-image-on-banner {
     background-image: url("../images/");
@@ -102,7 +102,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 30%;
-    height: 450px;
+    max-height: 450px;
 }
 .homepic p {
     color: #b3b3b3;
