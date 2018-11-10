@@ -195,28 +195,22 @@ nav {
 footer {
     background-color: rgba(26, 26, 26, 1);
     font-family: 'Oxygen', sans-serif;
-    font-size: 10pt; letter-spacing: 1.5pt;
+    font-size: 10pt; letter-spacing: 1.0pt;
 }
 footer p {
     margin: 0 auto;
     max-width: 1024px;
     padding: 40px 20px;
     color: #808080;
-}
-footer li {
-    float: left;
-    list-style: none;
+    text-align: center;
 }
 footer a {
     color: #00ccff;
     text-decoration: none;
 }
-footer a.spacing {
-    padding: 14px 16px;
-    color: #808080;
-}
-footer a.spacing:hover {
+footer a:hover {
     color: #00ccff;
+    text-decoration: underline;
 }
 /*
 Settings: Small screens (i.e., tablets and mobile phones).
