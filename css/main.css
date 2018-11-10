@@ -98,13 +98,13 @@ nav {
     text-decoration: none;
 }
 .homepic {
+    margin: 0 auto;
     width: 100%;
     height: 450px;
     overflow: hidden;
 }
 .homepic img {
     height: 900px;
-    margin: 0 auto;
 }
 .homepic p {
     color: #b3b3b3;
