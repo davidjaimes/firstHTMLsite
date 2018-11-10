@@ -65,7 +65,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    max-height: 248px;
+    height: 248px;
 }
 #no-image-on-banner {
     background-image: url("../images/");
@@ -101,14 +101,8 @@ nav {
     background-image: url("../images/home-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 30% 30%;
-    max-height: 450px;
-}
-.homepic p {
-    color: #b3b3b3;
-    font-family: 'Oxygen', sans-serif;
-    letter-spacing: 1.5pt;
-    font-size: 12pt;
+    background-position: 30% 25%;
+    height: 450px;
 }
 .homesec {
     margin: 0 auto;
