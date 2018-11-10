@@ -98,12 +98,14 @@ nav {
     text-decoration: none;
 }
 .homepic {
-    background-image: url("../images/home-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 25%;
     height: 450px;
 }
+#homepic {background-image: url("../images/home-pic.jpg");}
+#teotihuacan {background-image: url("../images/teotihuacan.jpg");}
+#me-hiltner {background-image: url("../images/me-hiltner.jpg");}
 .homesec {
     margin: 0 auto;
     max-width: 950px;
