@@ -120,7 +120,7 @@ nav {
 .homesec p {
     color: #b3b3b3;
     font-family: 'Oxygen', sans-serif;
-    letter-spacing: 1.0pt;
+    letter-spacing: 0.5pt;
     line-height: 1.5;
     font-size: 12pt;
 }
@@ -133,6 +133,10 @@ nav {
     color: #b3b3b3;
     font-family: 'Arial', sans-serif;
     letter-spacing: 1pt;
+}
+.homesec code {
+    color: #fec418;
+    background: rgba(26, 26, 26, 0.98);
 }
 .homesec pre {
     overflow-x: scroll;
