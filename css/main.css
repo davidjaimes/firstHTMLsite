@@ -105,6 +105,7 @@ nav {
 }
 .homepic img {
     height: 900px;
+    width: 100%;
 }
 .homepic p {
     color: #b3b3b3;
