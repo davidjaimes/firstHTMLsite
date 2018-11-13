@@ -104,10 +104,6 @@ nav {
     height: 450px;
 }
 #homepic {background-image: url("../images/home-pic.jpg");}
-#me-hiltner {
-    background-image: url("../images/me-hiltner.jpg");
-    background-position: 30% 50%;
-}
 .homesec {
     margin: 0 auto;
     max-width: 950px;
