@@ -187,10 +187,11 @@ nav {
     font-family: 'Oxygen', sans-serif;
     font-size: 10pt;
     letter-spacing: 0pt;
-    line-height: 1;
+    line-height: 1.5;
 }
 .homesec table.tile p.tile-date {
     color: #fec418;
+    font-size: 10pt;
 }
 .homesec caption {
     font-family: 'Oxygen', sans-serif;
