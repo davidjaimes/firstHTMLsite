@@ -183,7 +183,10 @@ nav {
     text-decoration: underline;
 }
 .homesec table.tile p {
+    font-family: 'Oxygen', sans-serif;
     font-size: 10pt;
+    letter-spacing: 0pt;
+    line-height: 0;
 }
 .homesec table.tile p.tile-date {
     color: #fec418;
