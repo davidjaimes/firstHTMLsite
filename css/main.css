@@ -8,7 +8,6 @@ Comments: Questions about the code? Feel free to contact me via email.
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300');
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
-@import url("https://fonts.googleapis.com/css?family=Raleway");
 
 * {
     margin: 0px;
@@ -67,9 +66,6 @@ nav {
     background-position: center;
     height: 248px;
 }
-#no-image-on-banner {
-    background-image: url("../images/");
-}
 .banner .transbox {
     background: rgba(26, 26, 26, 0.8);
     height: inherit;
@@ -98,12 +94,12 @@ nav {
     text-decoration: none;
 }
 .homepic {
+    background-image: url("../images/home-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 30% 25%;
     height: 450px;
 }
-#homepic {background-image: url("../images/home-pic.jpg");}
 .homesec {
     margin: 0 auto;
     max-width: 950px;
@@ -172,9 +168,19 @@ nav {
     text-align: left;
     padding: 10px;
 }
+.homesec table.tile td.tile-pic {
+    width: 25%;
+}
+.homesec table.tile td.tile-pic img {
+    width: 100%;
+}
 .homesec table.tile a {
     color: #00ccff;
     text-decoration: none;
+}
+.homesec table.tile a:hover {
+    color: #00ccff;
+    text-decoration: underline;
 }
 .homesec caption {
     font-family: 'Oxygen', sans-serif;
