@@ -100,13 +100,6 @@ nav {
     background-position: 30% 25%;
     height: 450px;
 }
-.homepic2 img {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: 30% 20%;
-}
 .homesec {
     margin: 0 auto;
     max-width: 950px;
