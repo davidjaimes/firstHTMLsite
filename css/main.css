@@ -94,6 +94,8 @@ nav {
     text-decoration: none;
 }
 .homepic {
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
     background-image: url("../images/home-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +108,6 @@ nav {
 }
 .homepic .transbox h1 {
     padding-top: 88px;
-    font-family: 'Oxygen', sans-serif;
     color: #f2f2f2;
     letter-spacing: 4pt;
 }
