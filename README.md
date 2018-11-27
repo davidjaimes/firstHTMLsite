@@ -1,4 +1,4 @@
-```bash
+```shell
 #!/bin/bash
 touch ~/bash_profile
 echo '# Author: David Jaimes
