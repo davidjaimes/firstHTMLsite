@@ -139,15 +139,16 @@ nav {
     letter-spacing: 1pt;
 }
 .homesec code {
-    color: #fec418;
+    color: #fee59a;
     background: rgba(26, 26, 26, 0.98);
     padding: 4px;
 }
 .homesec pre {
     overflow-x: scroll;
     background: rgba(26, 26, 26, 0.98);
-    padding: 10px;
+    padding: 15px;
     color: #b3b3b3;
+    font-size: 12pt;
 }
 .homesec table.line {
     width: 100%;
