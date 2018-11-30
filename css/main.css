@@ -8,6 +8,7 @@ Comments: Questions about the code? Feel free to contact me via email.
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300');
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 
 * {
     margin: 0px;
@@ -146,9 +147,11 @@ nav {
 .homesec pre {
     overflow-x: scroll;
     background: rgba(26, 26, 26, 0.98);
-    padding: 20px;
+    padding: 25px;
     color: #b3b3b3;
-    font-size: 11pt;
+    font-size: 10pt;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 15px;
 }
 .homesec table.line {
     width: 100%;
