@@ -152,8 +152,7 @@ nav {
     font-size: 10pt;
     font-family: 'Roboto Mono', monospace;
     border-radius: 4px;
-    white-space: pre;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 .homesec table.line {
     width: 100%;
