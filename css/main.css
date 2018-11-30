@@ -145,13 +145,14 @@ nav {
     padding: 4px;
 }
 .homesec pre {
-    overflow-x: scroll;
+    overflow-x: auto;
     background: rgba(26, 26, 26, 0.98);
     padding: 25px;
     color: #b3b3b3;
     font-size: 10pt;
     font-family: 'Roboto Mono', monospace;
-    border-radius: 15px;
+    border-radius: 4px;
+    white-space: pre;
 }
 .homesec table.line {
     width: 100%;
