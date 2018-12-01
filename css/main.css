@@ -53,12 +53,6 @@ nav {
     height: 12pt;
     width: 12pt;
 }
-svg path {
-    fill: #b3b3b3;
-}
-svg path:hover {
-    fill: #00ccff;
-}
 .header a i {
     padding-right: 8px;
 }
