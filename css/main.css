@@ -49,13 +49,9 @@ nav {
     text-decoration: none;
     font-size: 10pt;
 }
-.header a img {
-    src: "../images/dj-cup-logo.svg";
-    height: 1em;
+path {
     fill: #b3b3b3;
-}
-.header a img:hover {
-    fill: #00ccff;
+    pointer-events: all;
 }
 .header a i {
     padding-right: 8px;
