@@ -49,9 +49,15 @@ nav {
     text-decoration: none;
     font-size: 10pt;
 }
+.header a .dj-cup-logo {
+    height: 1em;
+}
 path {
     fill: #b3b3b3;
     pointer-events: all;
+}
+path:hover {
+    fill: #00ccff;
 }
 .header a i {
     padding-right: 8px;
