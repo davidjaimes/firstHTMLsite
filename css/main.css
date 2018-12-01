@@ -59,6 +59,12 @@ nav {
     height: 12pt;
     width: 12pt;
 }
+svg path {
+    fill: #b3b3b3;
+}
+svg:hover path {
+    fill: #00ccff;
+}
 .header .icon {
     display: none;
 }
