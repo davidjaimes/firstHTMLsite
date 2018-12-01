@@ -258,10 +258,6 @@ footer a:hover {
 Settings: Small screens (i.e., tablets and mobile phones).
 */
 @media screen and (max-width: 736px) {
-    #owner-logo {
-        text-align: left;
-        padding-left: 8px;
-    }
     .header a:not(:first-child) {
         display: none;
     }
