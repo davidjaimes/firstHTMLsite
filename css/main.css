@@ -49,6 +49,9 @@ nav {
     text-decoration: none;
     font-size: 10pt;
 }
+.header .dj-cup-logo {
+    height: 100%;
+}
 .header a i {
     padding-right: 8px;
 }
