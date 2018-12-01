@@ -52,9 +52,11 @@ nav {
 .dj-cup-logo {
     height: 12pt;
     width: 12pt;
+}
+svg path {
     fill: #b3b3b3;
 }
-.dj-cup-logo:hover {
+svg path:hover {
     fill: #00ccff;
 }
 .header a i {
