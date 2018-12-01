@@ -51,6 +51,10 @@ nav {
 }
 .header a img {
     height: 1em;
+    fill: #b3b3b3;
+}
+.header a img:hover {
+    fill: #00ccff;
 }
 .header a i {
     padding-right: 8px;
