@@ -55,10 +55,6 @@ nav {
 .header a:hover {
     color: #00ccff;
 }
-.header a img {
-    height: 12pt;
-    width: 12pt;
-}
 svg path {
     fill: #b3b3b3;
 }
