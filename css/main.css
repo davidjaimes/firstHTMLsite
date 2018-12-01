@@ -49,6 +49,10 @@ nav {
     text-decoration: none;
     font-size: 10pt;
 }
+.dj-cup-logo {
+    height: 10pt;
+    width: 10pt;
+}
 path {
     fill: #b3b3b3;
     pointer-events: all;
