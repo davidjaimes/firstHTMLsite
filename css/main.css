@@ -52,10 +52,10 @@ nav {
 .dj-cup-logo {
     height: 12pt;
     width: 12pt;
-    color: #b3b3b3;
+    fill: #b3b3b3;
 }
 .dj-cup-logo:hover {
-    color: #00ccff;
+    fill: #00ccff;
 }
 .header a i {
     padding-right: 8px;
