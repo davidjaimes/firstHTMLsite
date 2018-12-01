@@ -50,6 +50,7 @@ nav {
     font-size: 10pt;
 }
 .header a img {
+    src: "../images/dj-cup-logo.svg";
     height: 1em;
     fill: #b3b3b3;
 }
