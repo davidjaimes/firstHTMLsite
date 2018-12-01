@@ -50,15 +50,12 @@ nav {
     font-size: 10pt;
 }
 .dj-cup-logo {
-    height: 10pt;
-    width: 10pt;
+    height: 12pt;
+    width: 12pt;
+    color: #b3b3b3;
 }
-path {
-    fill: #b3b3b3;
-    pointer-events: all;
-}
-path:hover {
-    fill: #00ccff;
+.dj-cup-logo:hover {
+    color: #00ccff;
 }
 .header a i {
     padding-right: 8px;
