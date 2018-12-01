@@ -55,6 +55,10 @@ nav {
 .header a:hover {
     color: #00ccff;
 }
+.header a img {
+    height: 12pt;
+    width: 12pt;
+}
 .header .icon {
     display: none;
 }
