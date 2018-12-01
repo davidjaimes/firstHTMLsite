@@ -33,7 +33,7 @@ nav {
     max-width: 1024px;
 }
 #owner-logo {
-    width: 45%;
+    width: 30%;
     text-align: left;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 12pt;
@@ -55,10 +55,10 @@ nav {
 .header a:hover {
     color: #00ccff;
 }
-.header a svg path {
+#owner-logo svg path {
     fill: #b3b3b3;
 }
-.header a svg:hover path {
+#owner-logo svg:hover path {
     fill: #00ccff;
 }
 .header .icon {
