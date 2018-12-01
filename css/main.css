@@ -49,7 +49,7 @@ nav {
     text-decoration: none;
     font-size: 10pt;
 }
-.header .dj-cup-logo {
+.header a img {
     height: 100%;
 }
 .header a i {
