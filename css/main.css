@@ -34,7 +34,7 @@ nav {
 }
 #owner-logo {
     width: 15%;
-    text-align: left;
+    text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 12pt;
     letter-spacing: 2pt;
@@ -42,7 +42,7 @@ nav {
 .header a {
     display: inline-block;
     color: #b3b3b3;
-    text-align: left;
+    text-align: center;
     height: 48px;
     line-height: 48px;
     width: 15%;
