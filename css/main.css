@@ -55,10 +55,10 @@ nav {
 .header a:hover {
     color: #00ccff;
 }
-svg path {
+.header svg path {
     fill: #b3b3b3;
 }
-svg:hover path {
+.header svg:hover path {
     fill: #00ccff;
 }
 .header .icon {
