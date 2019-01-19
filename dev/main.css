@@ -30,4 +30,11 @@ nav ul li:hover {
   color: #00ccff;
 }
 
+svg path {
+  fill: #b3b3b3;
+}
+svg:hover path {
+  fill: #00ccff;
+}
+
 /*# sourceMappingURL=main.css.map */
