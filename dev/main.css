@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Oxygen");
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(26, 26, 26, 0.98);
+}
+
+nav {
+  margin-top: -13.333333px;
+  background-color: rgba(26, 26, 26, 0.98);
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  font-family: "Oxygen", sans-serif;
+  font-size: 10pt;
+  color: #b3b3b3;
+}
+nav ul {
+  padding-right: 40px;
+  text-align: center;
+}
+nav ul a {
+  color: #b3b3b3;
+}
+nav ul li {
+  display: inline-block;
+  width: 12%;
+}
+nav ul li:hover {
+  color: #00ccff;
+}
+
+/*# sourceMappingURL=main.css.map */
