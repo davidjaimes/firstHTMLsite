@@ -19,14 +19,14 @@ nav ul {
   padding-right: 40px;
   text-align: center;
 }
-nav ul a {
+nav ul li a {
   color: #b3b3b3;
 }
 nav ul li {
   display: inline-block;
   width: 12%;
 }
-nav ul li:hover {
+nav ul li a:hover {
   color: #00ccff;
 }
 
