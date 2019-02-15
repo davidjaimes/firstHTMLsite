@@ -41,4 +41,41 @@ svg:hover path {
   fill: #00ccff;
 }
 
+.banner {
+  text-align: center;
+  font-family: "Oxygen", sans-serif;
+  background-image: url("images/djaimes.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.banner .transbox {
+  background: rgba(26, 26, 26, 0.8);
+  height: inherit;
+}
+.banner .transbox h1 {
+  padding-top: 88px;
+  font-family: "Kaushan Script", cursive;
+  color: #f2f2f2;
+  letter-spacing: 4pt;
+}
+.banner .transbox hr {
+  margin: 0 auto;
+  max-width: 90%;
+  border-width: 1px;
+  border-style: solid;
+  color: #808080;
+  float: center;
+}
+.banner .transbox p {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  color: #b3b3b3;
+}
+.banner .transbox p a {
+  color: #00ccff;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=main.css.map */
