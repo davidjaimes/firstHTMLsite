@@ -49,14 +49,13 @@ svg:hover path {
   background-size: cover;
   background-position: center;
   height: 600px;
-  padding-top: -20px;
 }
 .banner .transbox {
   background: rgba(26, 26, 26, 0.8);
   height: inherit;
 }
 .banner .transbox h1 {
-  padding-top: 60px;
+  padding-top: 88px;
   font-family: "Kaushan Script", cursive;
   color: #f2f2f2;
   letter-spacing: 4pt;
