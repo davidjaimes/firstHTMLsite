@@ -44,7 +44,7 @@ svg:hover path {
 .banner {
   text-align: center;
   font-family: "Oxygen", sans-serif;
-  background-image: url("images/djaimes.webp");
+  background-image: url("../images/djaimes.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
