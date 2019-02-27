@@ -41,3 +41,14 @@ nav ul li a:hover {
   color: #b3b3b3;
   transition: 0.3s;
 }
+
+@media screen and (max-width: 736px) {
+  .header.responsive {
+    height: 100%;
+  }
+  .header.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
