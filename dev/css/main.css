@@ -2,13 +2,13 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: rgba(26, 26, 26, 0.98);
+  background-color: #fff;
 }
 
 nav {
   position: fixed;
   margin-top: -13.333333px;
-  background-color: rgba(26, 26, 26, 0.98);
+  background-color: rgba(45, 45, 45, 0.98);
   height: 48px;
   line-height: 48px;
   width: 100%;
