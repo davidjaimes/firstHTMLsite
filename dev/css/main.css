@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Oxygen:300,400|Kaushan+Script|Roboto:100,300,400|Open+Sans+Condensed:300|Quicksand:300,400");
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 
 body {
   margin: 0;
@@ -20,10 +21,18 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  width: 12%;
+  width: 10%;
   height: 44px;
   line-height: 44px;
 
+}
+
+nav ul li:first-child{
+  display: none;
+}
+
+nav ul li:last-child{
+  display: none;
 }
 
 nav ul li a {
@@ -43,17 +52,26 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
-nav ul li:last-child {
-  display: none;
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
   nav ul li:not(:first-child) {
     display: none;
   }
 
   nav ul li:first-child {
+    display: block;
     float: left;
-    margin-left: 20px;
+    width: fit-content;
+    padding-left: 20px;
+  }
+
+  nav ul li:nth-child(2) {
+    display: inline-block;
+  }
+
+  nav ul li:last-child {
+    display: block;
+    float: right;
+    padding-right: 20px;
+    width: fit-content;
   }
 }
