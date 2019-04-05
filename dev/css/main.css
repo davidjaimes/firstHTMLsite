@@ -32,10 +32,6 @@ nav ul li:first-child{
   display: none;
 }
 
-nav ul li:nth-child(2){
-  font-size: 14pt;
-}
-
 nav ul li:last-child{
   display: none;
 }
@@ -50,6 +46,10 @@ nav ul li a {
   display: block;
   width: 100%;
   height: 100%
+}
+
+nav ul li a:nth-child(2){
+  font-size: 14pt;
 }
 
 nav ul li a:hover {
