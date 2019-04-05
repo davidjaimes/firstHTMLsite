@@ -65,6 +65,11 @@ nav ul li a:hover {
     padding-left: 20px;
   }
 
+  nav ul li:nth-child(2) {
+    display: inline-block;
+    font-size: 16pt;
+  }
+
   nav ul li:last-child {
     display: block;
     float: right;
