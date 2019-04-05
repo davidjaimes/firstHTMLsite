@@ -1,11 +1,13 @@
-
-@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 @font-face {
   font-family: 'Quicksand';
   font-display: auto;
   src: local('Quicksand'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pgHYYT8L_FYzokA.woff2) format('woff2');
 }
-
+@font-face {
+  font-family: 'FontAwesome';
+  font-display: auto;
+  src: local('FontAwesome'), url(https://use.fontawesome.com/releases/v5.2.0/webfonts/fa-solid-900.woff2) format('woff2');
+}
 body {
   margin: 0;
   padding: 0;
