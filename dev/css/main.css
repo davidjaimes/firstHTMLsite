@@ -32,6 +32,10 @@ nav ul li:first-child{
   display: none;
 }
 
+nav ul li:nth-child(2){
+  font-size: 14pt;
+}
+
 nav ul li:last-child{
   display: none;
 }
