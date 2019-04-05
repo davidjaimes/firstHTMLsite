@@ -6,7 +6,7 @@
 @font-face {
   font-family: 'FontAwesome';
   font-display: auto;
-  src: local('FontAwesome'), url(https://use.fontawesome.com/releases/v5.2.0/webfonts/fa-solid-900.woff2) format('woff2');
+  src: url(https://use.fontawesome.com/releases/v5.2.0/webfonts/fa-solid-900.woff2) format('woff2');
 }
 body {
   margin: 0;
