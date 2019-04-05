@@ -48,10 +48,6 @@ nav ul li a {
   height: 100%
 }
 
-nav ul li a:nth-child(2) {
-  font-size: 14pt;
-}
-
 nav ul li a:hover {
   color: #b3b3b3;
   transition: 0.3s;
@@ -67,11 +63,6 @@ nav ul li a:hover {
     float: left;
     width: fit-content;
     padding-left: 20px;
-  }
-
-  nav ul li:nth-child(2) {
-    display: inline-block;
-    font-size: 16pt;
   }
 
   nav ul li:last-child {
