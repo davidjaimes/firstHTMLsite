@@ -67,7 +67,7 @@ nav ul li a:hover {
     height: 600px;
 }
 .banner .transbox {
-    background: rgba(26, 26, 26, 0.8);
+    background: rgba(26, 26, 26, 0.5);
     height: inherit;
 }
 .banner .transbox h1 {
