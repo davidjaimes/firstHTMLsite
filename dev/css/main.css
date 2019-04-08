@@ -64,7 +64,11 @@ main {
   font-size: 12pt;
 }
 
-main h1, p {
+main h1 {
+  font-style: 'Quicksand', sans-serif;
+}
+
+main p {
   font-style: 'Quicksand', sans-serif;
 }
 
