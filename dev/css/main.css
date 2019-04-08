@@ -57,6 +57,13 @@ nav ul li a:hover {
   transition: 0.3s;
 }
 
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  font-style: 'Quicksand', sans-serif;
+  font-size: 12pt;
+}
+
 @media screen and (max-width: 900px) {
   nav ul li:not(:first-child) {
     display: none;
