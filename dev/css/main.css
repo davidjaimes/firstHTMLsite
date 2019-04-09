@@ -62,12 +62,12 @@ main {
   margin: 0 auto;
 }
 
-main h1 {
-  font-style: 'Quicksand', sans-serif;
+main h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
 }
 
 main p {
-  font-style: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 @media screen and (max-width: 900px) {
