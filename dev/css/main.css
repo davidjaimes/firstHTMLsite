@@ -1,4 +1,4 @@
-@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+
 @font-face {
   font-family: 'Quicksand';
   font-display: block;
@@ -63,13 +63,6 @@ main {
   padding-left: 26px;
   padding-right: 26px;
   padding-top: 120px;
-}
-
-main h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quicksand', sans-serif;
-}
-
-main p {
   font-family: 'Quicksand', sans-serif;
 }
 
