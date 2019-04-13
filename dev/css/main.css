@@ -29,14 +29,9 @@ nav ul li {
   width: 10%;
   height: 44px;
   line-height: 44px;
-
 }
 
-nav ul li:first-child{
-  display: none;
-}
-
-nav ul li:last-child{
+nav ul li:first-child, li:last-child {
   display: none;
 }
 
