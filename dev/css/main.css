@@ -39,7 +39,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 10pt;
+  font-size: 12pt;
   letter-spacing: 0.1em;
   font-weight: 300;
   display: block;
@@ -75,7 +75,6 @@ main {
 
   nav ul li:nth-child(2) {
     display: inline-block;
-    font-size: 16pt;
   }
 
   nav ul li:last-child {
