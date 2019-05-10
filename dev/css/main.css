@@ -39,7 +39,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 12pt;
+  font-size: 100%;
   letter-spacing: 0.1em;
   font-weight: 300;
   display: block;
@@ -83,6 +83,5 @@ main {
     float: right;
     padding-right: 20px;
     width: fit-content;
-    font-size: 12pt;
   }
 }
