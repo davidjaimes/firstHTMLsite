@@ -31,7 +31,7 @@ nav ul li {
   line-height: 44px;
 }
 
-nav ul li:first-child, li:last-child {
+nav ul li:last-child {
   display: none;
 }
 
