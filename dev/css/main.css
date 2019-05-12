@@ -63,13 +63,13 @@ main {
 .banner {
   background-image: url("../../images/djaimes-icon-wall.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   height: 600px;
 }
 
 .banner .transbox {
-  background: rgba(26, 26, 26, 0.9);
+  background: rgba(26, 26, 26, 0.95);
   height: inherit;
 }
 
