@@ -75,11 +75,12 @@ main {
   color: #f2f2f2;
   padding: 0px 26px;
   text-align: center;
-  display: block;
-  justify-content: center;
+  display: inline-block;
+  align-content: center;
   margin: 0 auto;
   max-width: 500px;
   height: 600px;
+  line-height: 600px;
 }
 
 .banner-title h1 {
