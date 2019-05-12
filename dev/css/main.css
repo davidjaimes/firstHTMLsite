@@ -62,7 +62,7 @@ main {
 
 .banner {
   background-image: url("../../images/djaimes-icon-brand.png");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 600px;
