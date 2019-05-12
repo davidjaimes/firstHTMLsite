@@ -27,8 +27,8 @@ nav ul {
 nav ul li {
   display: inline-block;
   width: 10%;
-  height: 44px;
-  line-height: 44px;
+  height: 60px;
+  line-height: 60px;
 }
 
 nav ul li:last-child {
@@ -39,7 +39,7 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   font-weight: 300;
   display: block;
