@@ -71,9 +71,11 @@ main {
 }
 
 .banner-title {
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Quicksand', sans-serif;
   color: #f2f2f2;
   letter-spacing: 4pt;
+  padding-top: 88px;
+  text-align: center;
 }
 
 @media screen and (max-width: 900px) {
