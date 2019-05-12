@@ -74,6 +74,8 @@ main {
   font-family: 'Helvetica', sans-serif;
   color: #f2f2f2;
   text-align: center;
+  padding: 0px 26px;
+  max-width: 600px;
 }
 
 .banner-title h1 {
