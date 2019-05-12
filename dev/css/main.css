@@ -63,7 +63,7 @@ main {
 .banner {
   background-image: url("../../images/djaimes-icon-wall.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   height: 600px;
 }
