@@ -81,7 +81,7 @@ main {
 
 .banner-title h1 {
   letter-spacing: 4pt;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
 @media screen and (max-width: 900px) {
