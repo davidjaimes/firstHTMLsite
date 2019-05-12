@@ -61,8 +61,8 @@ main {
 }
 
 .banner {
-  background-image: url("../../images/mount-laguna.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../../images/djaimes-icon-brand.png");
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   height: 600px;
