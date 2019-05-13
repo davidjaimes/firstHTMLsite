@@ -79,6 +79,7 @@ main {
   margin: 0 auto;
   max-width: 500px;
   height: 100%;
+  display: table-cell;
 }
 
 .banner-title h1 {
