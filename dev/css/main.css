@@ -75,6 +75,7 @@ main {
   color: #f2f2f2;
   padding: 0px 26px;
   text-align: center;
+  vertical-align: middle;
   margin: 0 auto;
   max-width: 500px;
   height: 100%;
@@ -82,7 +83,6 @@ main {
 
 .banner-title h1 {
   letter-spacing: 4pt;
-  padding-top: 160px;
 }
 
 @media screen and (max-width: 900px) {
