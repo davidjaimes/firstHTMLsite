@@ -73,12 +73,10 @@ main {
 .banner-title {
   font-family: 'Helvetica', sans-serif;
   color: #f2f2f2;
-  padding: 0px 26px;
+  padding: 120px 26px;
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
-  display: flex;
-  align-items: center;
 }
 
 .banner-title h1 {
