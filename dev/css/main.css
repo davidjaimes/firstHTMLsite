@@ -77,7 +77,7 @@ main {
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
-  height: 600px;
+  height: 100%;
 }
 
 .banner-title h1 {
