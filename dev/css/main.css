@@ -58,6 +58,7 @@ nav ul li a:hover {
   background-position: center;
   height: 600px;
   margin-top: 21px;
+  display: table;
 }
 
 .banner-title {
@@ -67,9 +68,8 @@ nav ul li a:hover {
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .banner-title h1 {
