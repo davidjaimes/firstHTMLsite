@@ -67,14 +67,13 @@ nav ul li a:hover {
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
-  min-height: 590px;
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .banner-title h1 {
   letter-spacing: 4pt;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 @media screen and (max-width: 900px) {
