@@ -61,6 +61,7 @@ nav ul li a:hover {
 }
 
 .banner-container {
+  height: 600px;
   display: table;
 }
 
