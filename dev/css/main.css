@@ -63,7 +63,7 @@ nav ul li a:hover {
 .banner-title {
   font-family: 'Helvetica', sans-serif;
   color: #f2f2f2;
-  padding: 200px 26px;
+  padding: 0px 26px;
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
@@ -72,6 +72,8 @@ nav ul li a:hover {
 
 .banner-title h1 {
   letter-spacing: 4pt;
+  display: flex;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 900px) {
