@@ -72,7 +72,7 @@ nav ul li a:hover {
 
 .banner-title h1 {
   letter-spacing: 4pt;
-  display: table-cell;
+  display: inline-block;
   vertical-align: middle;
 }
 
