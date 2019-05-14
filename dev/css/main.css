@@ -63,7 +63,7 @@ nav ul li a:hover {
 
 .banner-container {
   height: 600px;
-  width: 100%;
+  max-width: 500px;
   display: table;
 }
 
@@ -73,7 +73,6 @@ nav ul li a:hover {
   padding: 0px 26px;
   text-align: center;
   margin: 0 auto;
-  max-width: 500px;
   display: table-cell;
   vertical-align: middle;
 }
