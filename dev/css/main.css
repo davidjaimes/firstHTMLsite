@@ -58,7 +58,6 @@ nav ul li a:hover {
   background-position: center;
   height: 600px;
   margin-top: 21px;
-  display: table;
 }
 
 .banner-title {
@@ -68,12 +67,13 @@ nav ul li a:hover {
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
-  display: table-cell;
-  vertical-align: middle;
+  display: table;
 }
 
 .banner-title h1 {
   letter-spacing: 4pt;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 900px) {
