@@ -77,10 +77,12 @@ nav ul li a:hover {
 }
 
 .icon-branding {
+  margin: auto auto;
   height: 400px;
   max-width: 900px;
   padding: 40px 26px;
   text-align: center;
+  font-family: 'Helvetica', sans-serif;
   color: #b3b3b3;
 }
 
