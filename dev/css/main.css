@@ -76,10 +76,6 @@ nav ul li a:hover {
   vertical-align: middle;
 }
 
-.banner-title h1 {
-  letter-spacing: 4pt;
-}
-
 @media screen and (max-width: 900px) {
   nav ul li:not(:first-child) {
     display: none;
