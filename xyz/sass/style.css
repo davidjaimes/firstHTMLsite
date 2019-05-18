@@ -22,7 +22,7 @@ header ul li {
   height: 60px;
   line-height: 60px;
 }
-header ul li:last-child() {
+header ul li:last-child {
   display: none;
 }
 header ul li a {
