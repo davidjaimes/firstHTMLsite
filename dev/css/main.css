@@ -59,8 +59,7 @@ nav ul li a:hover {
   background-position: center;
   height: 600px;
   margin-top: 21px;
-  --aspect-ratio-w: 319;
-  --aspect-ratio-h: 178;
+  width: 1075.28px;
 }
 
 .banner-container {
