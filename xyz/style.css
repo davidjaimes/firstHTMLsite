@@ -1,13 +1,6 @@
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
-@font-face {
-    font-family: "FontAwesome";
-    font-weight: normal;
-    font-display: auto;
-    font-style: normal;
-    src: url("https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-solid-900.woff2") format("woff2");
-    src: url("https://use.fontawesome.com/releases/v5.8.1/webfonts/fa-brands-400.woff2") format("woff2");
-}
 
 body {
     margin: 0px;
@@ -79,6 +72,15 @@ header ul li a:hover {
     padding: 0px 26px;
     display: table-cell;
     vertical-align: middle;
+}
+
+.banner-title h1 {
+    font-size: 36px;
+}
+
+.banner-title p {
+    font-size: 22px;
+    color: rgb(179, 179, 179);
 }
   
 .icon-branding {
