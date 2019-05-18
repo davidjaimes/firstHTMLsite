@@ -55,10 +55,10 @@ nav ul li a:hover {
 .banner {
   background-image: url("../../images/djaimes-icon-wall.png");
   background-repeat: no-repeat;
-  background-size: 1858.25px 600px;
+  background-size: 1914px 618px;
   background-position: center;
   margin: 21px auto 0px auto;
-  max-height: 614px;
+  height: 600px;
 }
 
 .banner-container {
