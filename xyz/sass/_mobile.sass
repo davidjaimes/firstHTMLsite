@@ -1,0 +1,22 @@
+@media screen and (max-width: 900px)
+    header
+        ul
+            li
+                &:not(:first-child)
+                    display: none
+                
+                &:first-child
+                    display: block
+                    float: left
+                    width: fit-content
+                    padding-left: 20px
+
+                &:nth-child(7)
+                    display: inline-block
+                    text-align: center
+                
+                &:last-child 
+                    display: block
+                    float: right
+                    padding-right: 20px
+                    width: fit-content
