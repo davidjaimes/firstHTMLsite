@@ -7,8 +7,12 @@ body {
     background-color: rgb(255, 255, 255);
   }
 
-.header {
+header {
     background-color: rgb(36, 41, 46);
     width: 100%;
-    margin-bottom: -21px;
+}
+
+header ul {
+    max-width: 1024px;
+    text-align: center;
 }
