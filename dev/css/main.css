@@ -54,6 +54,7 @@ nav ul li a:hover {
 
 .banner {
   background: url("../../images/djaimes-icon-brand.svg"), hsla(0,0%,100%,.6);
+  color: #2b3137;
   background-size: cover;
   background-position: center;
   margin: 21px auto 0px auto;
