@@ -53,8 +53,8 @@ nav ul li a:hover {
 }
 
 .banner {
-  background: url("../../images/djaimes-icon-brand.svg"), #2b3137;
-  background-size: cover;
+  background-image: url("../../images/djaimes-icon-wall.png");
+  background-size: 1858.25px 600px;
   background-position: center;
   margin: 21px auto 0px auto;
   height: 600px;
