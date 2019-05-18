@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 body {
-    margin: 0px 0px 0px 0px;
+    margin: 0px;
     background-color: rgb(255, 255, 255);
   }
 
@@ -13,8 +13,8 @@ header {
 }
 
 header ul {
-    margin: 0px auto 0px auto;
-    padding: 0px 0px 0px 0px;
+    margin: 0px auto;
+    padding: 0px;
     max-width: 1024px;
     text-align: center; 
 }
@@ -50,11 +50,11 @@ header ul li a:hover {
 }
 
 .banner-monogram {
-    background-image: url("images/djaimes-icon-wall.png");
+    background-image: url("images/monogram.png");
     background-repeat: no-repeat;
     background-size: 1914px 618px;
     background-position: center;
-    margin: 21px auto 0px auto;
+    margin: 0px auto;
     height: 600px;
 }
 
@@ -62,22 +62,22 @@ header ul li a:hover {
     height: 100%;
     max-width: 600px;
     display: table;
-    margin: auto auto auto auto;
+    margin: auto;
     text-align: center;
 }
 
 .banner-title {
     font-family: 'Helvetica', sans-serif;
     color: rgb(242, 242, 242);
-    padding: 0px 26px 0px 26px;
+    padding: 0px 26px;
     display: table-cell;
     vertical-align: middle;
 }
   
 .icon-branding {
-    margin: auto auto;
+    margin: auto;
     max-width: 900px;
-    padding: 80px 26px 80px 26px;
+    padding: 80px 26px;
     text-align: center;
     font-family: 'Helvetica', sans-serif;
     color: rgb(64, 64, 64);
