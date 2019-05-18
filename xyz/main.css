@@ -13,6 +13,14 @@ header {
 }
 
 header ul {
+    margin: 0px auto 0px auto;
     max-width: 1024px;
     text-align: center;
 }
+
+header ul li {
+    display: inline-block;
+    width: 10%;
+    height: 60px;
+    line-height: 60px;
+  }
