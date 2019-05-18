@@ -92,6 +92,11 @@ header ul li a:hover {
     color: rgb(64, 64, 64);
 }
 
+.icon-branding p {
+    font-size: 36px;
+    letter-spacing: 8px;
+}
+
 @media screen and (max-width: 900px) {
     header ul li:not(:first-child) {
       display: none;
