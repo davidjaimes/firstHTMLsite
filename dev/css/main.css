@@ -58,9 +58,8 @@ nav ul li a:hover {
   background-size: cover;
   background-position: center;
   height: 600px;
-  margin: auto;
-  margin-top: 21px;
-  width: 1075.28px;
+  margin: auto auto 21px 0px;
+  max-width: 1075.28px;
 }
 
 .banner-container {
