@@ -5,6 +5,7 @@
   src: local('Quicksand'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKodSZaM9iE8KbpRA_pgHYYT8L_FYzokA.woff2) format('woff2');
 }
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://unpkg.com/css-aspect-ratio@1/css-aspect-ratio.css');
 
 body {
   margin: 0;
@@ -58,6 +59,8 @@ nav ul li a:hover {
   background-position: center;
   height: 600px;
   margin-top: 21px;
+  --aspect-ratio-w: 11;
+  --aspect-ratio-h: 8;
 }
 
 .banner-container {
