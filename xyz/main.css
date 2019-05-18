@@ -44,3 +44,66 @@ header ul li a:hover {
     color: rgb(179, 179, 179);
     transition: 0.3s;
 }
+
+.banner-background {
+    background: rgb(43, 49, 55);
+}
+
+.banner-monogram {
+    background-image: url("images/djaimes-icon-wall.png");
+    background-repeat: no-repeat;
+    background-size: 1914px 618px;
+    background-position: center;
+    margin: 21px auto 0px auto;
+    height: 600px;
+}
+
+.banner-container {
+    height: 100%;
+    max-width: 600px;
+    display: table;
+    margin: auto auto auto auto;
+    text-align: center;
+}
+
+.banner-title {
+    font-family: 'Helvetica', sans-serif;
+    color: rgb(242, 242, 242);
+    padding: 0px 26px 0px 26px;
+    display: table-cell;
+    vertical-align: middle;
+}
+  
+.icon-branding {
+    margin: auto auto;
+    max-width: 900px;
+    padding: 80px 26px 80px 26px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    color: rgb(64, 64, 64);
+}
+
+@media screen and (max-width: 900px) {
+    header ul li:not(:first-child) {
+      display: none;
+    }
+  
+    header ul li:first-child {
+      display: block;
+      float: left;
+      width: fit-content;
+      padding-left: 20px;
+    }
+  
+    header ul li:nth-child(7) {
+      display: inline-block;
+      text-align: center;
+    }
+  
+    header ul li:last-child {
+      display: block;
+      float: right;
+      padding-right: 20px;
+      width: fit-content;
+    }
+  }
