@@ -6,26 +6,26 @@ body {
   background-color: #ffffff;
 }
 
-header {
+nav {
   background-color: #24292e;
   width: 100%;
 }
-header ul {
+nav ul {
   margin: 0px auto;
   padding: 0px;
   max-width: 1024px;
   text-align: center;
 }
-header ul li {
+nav ul li {
   display: inline-block;
   width: 10%;
   height: 60px;
   line-height: 60px;
 }
-header ul li:last-child {
+nav ul li:last-child {
   display: none;
 }
-header ul li a {
+nav ul li a {
   color: #ffffff;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
@@ -34,15 +34,15 @@ header ul li a {
   width: 100%;
   height: 100%;
 }
-header ul li a:hover {
+nav ul li a:hover {
   color: #b3b3b3;
   transition: 0.3s;
 }
 
-main {
+header {
   background: #2b3137;
 }
-main section {
+header section {
   background-image: url(../images/monogram.png);
   background-repeat: no-repeat;
   background-size: 1914px 618px;
@@ -50,29 +50,29 @@ main section {
   margin: 0px auto;
   height: 600px;
 }
-main section div {
+header section div {
   height: 100%;
   max-width: 600px;
   display: table;
   margin: auto;
   text-align: center;
 }
-main section div div {
+header section div div {
   font-family: "Helvetica", sans-serif;
   color: #f2f2f2;
   padding: 0px 26px;
   display: table-cell;
   vertical-align: middle;
 }
-main section div div h1 {
+header section div div h1 {
   font-size: 36px;
 }
-main section div div p {
+header section div div p {
   font-size: 22px;
   color: #b3b3b3;
 }
 
-aside {
+main {
   margin: auto;
   max-width: 900px;
   padding: 80px 26px;
@@ -80,26 +80,26 @@ aside {
   font-family: "Helvetica", sans-serif;
   color: #404040;
 }
-aside p {
+main p {
   font-size: 36px;
   letter-spacing: 8px;
 }
 
 @media screen and (max-width: 900px) {
-  header ul li:not(:first-child) {
+  nav ul li:not(:first-child) {
     display: none;
   }
-  header ul li:first-child {
+  nav ul li:first-child {
     display: block;
     float: left;
     width: fit-content;
     padding-left: 20px;
   }
-  header ul li:nth-child(7) {
+  nav ul li:nth-child(7) {
     display: inline-block;
     text-align: center;
   }
-  header ul li:last-child {
+  nav ul li:last-child {
     display: block;
     float: right;
     padding-right: 20px;
