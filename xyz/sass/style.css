@@ -85,11 +85,19 @@ main p {
   letter-spacing: 8px;
 }
 main div.miniconda {
+  padding-top: 80px;
   text-align: left;
 }
 main div.miniconda p {
   font-size: 18px;
   letter-spacing: 0px;
+}
+main div.miniconda p ul li a {
+  text-decoration: none;
+}
+main div.miniconda p ul li a:hover {
+  text-decoration: underline;
+  color: #3399ff;
 }
 
 @media screen and (max-width: 900px) {
