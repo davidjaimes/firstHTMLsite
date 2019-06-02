@@ -94,10 +94,10 @@ main div.miniconda p {
 }
 main div.miniconda a {
   text-decoration: none;
+  color: #3358ff;
 }
 main div.miniconda a:hover {
   text-decoration: underline;
-  color: #3399ff;
 }
 
 @media screen and (max-width: 900px) {
