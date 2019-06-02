@@ -88,13 +88,10 @@ main div.list-of-icons p {
 }
 main div.profile-picture {
   background-image: url(../images/david-horizontal.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 1200px 401.04px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  height: 400px;
   margin: 0px auto;
 }
 main div.miniconda {
