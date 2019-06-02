@@ -73,14 +73,16 @@ header section div div p {
 }
 
 main {
+  font-family: "Helvetica", sans-serif;
+  color: #404040;
+}
+main div.list-of-icons {
   margin: auto;
   max-width: 900px;
   padding: 80px 26px;
   text-align: center;
-  font-family: "Helvetica", sans-serif;
-  color: #404040;
 }
-main p {
+main div.list-of-icons p {
   font-size: 36px;
   letter-spacing: 8px;
 }
@@ -94,7 +96,9 @@ main div.profile-picture {
   margin: 0px auto;
 }
 main div.miniconda {
-  padding-top: 80px;
+  margin: auto;
+  max-width: 900px;
+  padding: 80px 26px;
   text-align: left;
 }
 main div.miniconda p {
