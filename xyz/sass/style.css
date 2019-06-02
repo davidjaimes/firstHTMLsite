@@ -87,13 +87,14 @@ main div.list-of-icons p {
   letter-spacing: 8px;
 }
 main div.profile-picture {
-  max-width: 1200px;
   background-image: url(../images/david-horizontal.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1200px 401.04px;
   height: 400px;
   margin: 0px auto;
+  border-radius: 25px;
+  border-color: #404040;
 }
 main div.miniconda {
   margin: auto;
