@@ -84,13 +84,12 @@ main p {
   font-size: 36px;
   letter-spacing: 8px;
 }
-
-main.miniconda {
+main div.miniconda {
   text-align: left;
 }
-main.miniconda p {
-  letter-spacing: 0px;
+main div.miniconda p {
   font-size: 18px;
+  letter-spacing: 0px;
 }
 
 @media screen and (max-width: 900px) {
