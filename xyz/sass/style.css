@@ -84,6 +84,15 @@ main p {
   font-size: 36px;
   letter-spacing: 8px;
 }
+main div.profile-picture {
+  max-width: 1200px;
+  background-image: url(../images/david-horizontal.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1200px 401.04px;
+  height: 400px;
+  margin: 0px auto;
+}
 main div.miniconda {
   padding-top: 80px;
   text-align: left;
