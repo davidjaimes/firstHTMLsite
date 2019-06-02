@@ -98,6 +98,7 @@ main div.miniconda a {
 }
 main div.miniconda a:hover {
   text-decoration: underline;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 900px) {
