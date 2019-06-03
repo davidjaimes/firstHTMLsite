@@ -1,3 +1,4 @@
+##.bash_profile
 ```shell
 # Custom colors for bash Terminal in macOS
 # Default is:  “exfxcxdxbxegedabagacad”
@@ -23,4 +24,15 @@ alias add="git add"
 alias com="git commit -m"
 alias push="git push"
 alias brindle="cd ~/anaconda3/lib/python3.7/site-packages/brindle"
+```
+
+##Conda
+Turn off the base parenthases on the terminal print out to screen... annoying!
+```bash
+conda config --set changeps1 false
+```
+
+Packages to install:
+```
+conda astropy jupyter matplotlib numpy pandas scipy
 ```
