@@ -86,37 +86,6 @@ main div.list-of-icons p {
   font-size: 36px;
   letter-spacing: 8px;
 }
-main div.profile-picture {
-  max-width: 1200px;
-  background-image: url(../images/david-horizontal.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1200px 401.04px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  border: 2px solid #404040;
-  height: 400px;
-  margin: 80px auto;
-}
-main div.miniconda {
-  margin: auto;
-  max-width: 900px;
-  padding: 80px 26px;
-  text-align: left;
-}
-main div.miniconda p {
-  font-size: 18px;
-  letter-spacing: 0px;
-}
-main div.miniconda a {
-  text-decoration: none;
-  color: #0366d6;
-}
-main div.miniconda a:hover {
-  text-decoration: underline;
-  transition: 0.3s;
-}
 
 @media screen and (max-width: 900px) {
   nav ul li:not(:first-child) {
@@ -137,10 +106,6 @@ main div.miniconda a:hover {
     float: right;
     padding-right: 20px;
     width: fit-content;
-  }
-
-  main div.profile-picture {
-    background-position: 25% 50%;
   }
 }
 
